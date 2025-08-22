@@ -39,6 +39,7 @@ body {
 
 /* Informações do cabeçalho (idade, cidade, contato) */
 .header p {
+  text-align: center;
   margin: 2px 0;                    /* Espaçamento pequeno entre as linhas */
   color: #555;                      /* Cor cinza escuro para o texto */
 }
@@ -49,12 +50,13 @@ h2 {
   border-bottom: 2px solid #2b6cb0; /* Linha azul logo abaixo do título */
   padding-bottom: 5px;              /* Espaço entre o texto e a linha */
   margin-top: 30px;                 /* Espaço acima de cada seção */
+  text-align: center;
 }
 
 /* ======== TEXTO (parágrafos e itens de lista) ======== */
 p,
 li {
-  text-align: justify;              /* Texto justificado (alinha dos dois lados) */
+  text-align: center;              /* Texto justificado (alinha dos dois lados) */
   line-height: 1.6;                 /* Aumenta o espaçamento entre linhas -> melhora leitura */
 }
 
@@ -69,4 +71,32 @@ ul li::before {
   content: "• ";                    /* Insere uma bolinha manualmente antes de cada item */
   color: #2b6cb0;                   /* Define a cor da bolinha (azul) */
   font-weight: bold;                /* Deixa a bolinha mais grossa/forte */
+}
+
+#bnt-print{
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+ #bnt-print:hover{
+  background-color: rgb(255, 187, 0);
+  transition: background-color 0.4s;
+ }
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media print{
+  #bnt-print{
+    display: none;
+    visibility: hidden;
+  }
 }
